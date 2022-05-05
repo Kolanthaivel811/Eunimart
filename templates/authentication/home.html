@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    {% block staticResourses %}
+    {% load static %}
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href = "{% static '/css/home.css' %}">
+    {% endblock %}
+</head>
+<body>
+{% csrf_token %}
+<nav class ="nav-bar">
+    <div class="NavTopic">
+        <a id="NavTopic1" >
+            {% if user.is_authenticated %}
+            <h3>Hello {{ fname }}</h3>
+         {% endif %}
+        </a>
+    </div>
+
+    <div class="NavAccount">
+       <label id="NavProfile">Profile</label>
+        <div class="NavDropDown">
+            <a id="dd3" href="contact">Help</a>
+            <a id="dd4" href="signin">Logout</a>
+        </div>
+    </div>
+</nav>
+    <form action="home.html" method="post">
+        <div class="signDiv">
+        <label>First Name:</label></br>
+		<input id='name' type='text' name="fname" placeholder='Enter First Name'  required></br></br>
+		<label>Last Name:</label></br>
+        <input id='name' type='text' name="lname" placeholder='Enter Last Name' required></br></br>
+        <label>Father Name:</label></br>
+        <input id='name' type='text' name="frname" placeholder='Enter Father Name' required></br></br>
+        <label for="birthday">Birthday:</label><br>
+        <input type="date" id="name" name="birthday"><br><br>
+        <label>Permanent address:</label></br>
+        <input id='name' type='text' name="address1" placeholder='Enter permanent address' required></br></br>
+        <label>Current address:</label></br>
+        <input id='name' type='text' name="address2" placeholder='Enter Current address' required></br></br>
+        <label>Mobile Number:</label></br>
+        <input type="text" id="code" name="code" value="+91" size="4"/>
+        <input id='name' type='text' name="phone" placeholder="Enter Phone number" required></br><br>
+        <button type="submit" id="button">Update</button>
+            </div>
+    </form>
+    <script src="" async defer></script>
+</body>
+</html>
