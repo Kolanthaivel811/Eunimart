@@ -1,0 +1,83 @@
+*{
+	font-family: 'Poppins', sans-serif;
+}
+.nav-bar{
+    position: absolute;
+    top : 0;
+    left: 0;
+    height: 4.5em;
+    width: 100%;
+    background: -webkit-linear-gradient(left, #34a8eb, #7579ff);
+    text-decoration: none;
+    font-size: 1em;
+    color: white;
+}
+.nav-bar a{
+    text-decoration: none;
+    font-size:  1em;
+    color: white;
+}
+#NavTopic1{
+    position: absolute;
+    font-weight:bold;
+    top : 1em;
+    font-size: 1.5em;
+    left : 4%;
+}
+
+#NavProfile{
+    position: absolute;
+    top : 1.7em;
+    left : 94%;
+    font-size: 1em;
+}
+.NavDropDown{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    left : 88%;
+    top : 3em;
+    z-index:9999;
+}
+.NavDropDown a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.NavAccount:hover .NavDropDown{
+    display: block;
+}
+.NavDropDown a:hover{
+    background: linear-gradient(#34a8eb, #7579ff);
+    color:white;
+}
+.signDiv{
+    position: fixed;
+    top : 15%;
+    left : 40%;
+    height: 87%;
+    width: 51%;
+    background-color: white;
+    border-radius:10px;
+    overflow: auto;
+}
+
+.signDiv::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+}
+
+#button{
+    cursor: pointer;
+	border-radius:5px;
+	text-align:center;
+	align-items:center;
+	justify-content:center;
+	width:45%;
+	padding:7px;
+	color:#ffffff;
+	background-color:#34a8eb;
+	border:none;
+}

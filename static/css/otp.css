@@ -1,0 +1,13 @@
+body{
+	background-color: #ffffff;
+}
+#topic{
+    color: #34a8eb;
+    justify-content: center;
+    align-items: center;
+}
+
+#button{
+    margin-left: 215px;
+
+}
